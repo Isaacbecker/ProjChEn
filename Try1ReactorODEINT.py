@@ -71,7 +71,7 @@ for Section in range(1): #Prelimiary calculations
     
     R=8.3145E-5 #[bar*m³/molK]
     FT0=FDME0+FMetOH0+FH2O0+FH20+FCO20+FCO0 #Initial total flowrate
-    v0=FT0*R*T0/P0
+    v0=FT0*R*T0/P0 #Initial volumetric flow rate [m³/s]
     
 
 
@@ -173,7 +173,7 @@ plt.plot(W,z[:,2],'r-')
 plt.plot(W,z[:,3],'k-')
 plt.plot(W,z[:,4],'m-')
 plt.plot(W,z[:,5],'y-')
-plt.legend(['FDME','FMetOH','FH2O','FH2','FCO2','FCO'])
+plt.legend(['$F_{DME}$','$F_{MetOH}$','$F_{H2O}','$F_{H2}$','$F_{CO2}$','$F_{CO}'])
 plt.ylabel('$F_i$ [mol/s]')
 plt.xlabel('Catalyst mass [Kg]')
 plt.title('Molar flowrate vs. Catalyst Mass')
