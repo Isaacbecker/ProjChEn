@@ -83,8 +83,9 @@ for Section in range(1): #Set variables
     FH2=m.Var(value=FH20,lb=0)
     FCO2=m.Var(value=FCO20,lb=0)
     FCO=m.Var(value=FCO0,lb=0)
-    T=m.Var(value=T0,lb=0)
-    P=m.Var(value=P0,lb=1)
+    
+    T=m.Var(value=T0,lb=0) #Optimize - Isothermal
+    P=m.Var(value=P0,lb=1) #Optimize
 
     FT=m.Var(value=FT0)
     v=m.Var(value=v0)
@@ -140,7 +141,7 @@ R4=m.Intermediate(k4*KMetOH**2*( CMetOH**2-CH2O*CDME/(Keq4) )/( (1+2*(KMetOH*CMe
 m.Equation(FT==FDME+FMetOH+FH2O+FH2+FCO2+FCO)
 m.Equation(v==v0*(FT/FT0)*(P0/P)*(T/T0))
 
-m.Equation(FDME.dt()==R4/2)
+m.Equation(FDME.dt()==R4/2)# →Obj: Max(FDME)
 m.Equation(FMetOH.dt()==R1+R3-R4)
 m.Equation(FH2O.dt()==R2+R3+R4/2)
 m.Equation(FH2.dt()==-2*R1-R2-3*R)
