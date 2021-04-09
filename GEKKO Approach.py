@@ -144,7 +144,7 @@ m.Equation(v==v0*(FT/FT0)*(P0/P)*(T/T0))
 m.Equation(FDME.dt()==R4/2)# →Obj: Max(FDME)
 m.Equation(FMetOH.dt()==R1+R3-R4)
 m.Equation(FH2O.dt()==R2+R3+R4/2)
-m.Equation(FH2.dt()==-2*R1-R2-3*R)
+m.Equation(FH2.dt()==-2*R1-R2-3*R3)
 m.Equation(FCO2.dt()==-R2-R3)
 m.Equation(FCO.dt()==-R1+R2)
 
