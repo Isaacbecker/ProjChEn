@@ -169,7 +169,7 @@ for j in range(NPSA):
             dFDMEdW = R4/2
             dFMetOHdW = R1+R3-R4
             dFH2OdW = R2+R3+R4/2
-            dFH2dW = -2*R1-R2-3*R
+            dFH2dW = -2*R1-R2-3*R3
             dFCO2dW = -R2-R3
             dFCOdW = -R1+R2
             dTdW = 0
